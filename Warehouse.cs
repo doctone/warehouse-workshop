@@ -27,8 +27,8 @@ namespace Warehouse
             };
         }
 
-        private void addItem(Item item, int amount, int price){
-            var total = amount * price;
+        public void addItem(Item item, int amount){
+            var total = amount * item.Price;
             if (Budget > total)
             {
                 CurrentItems[item] += amount;

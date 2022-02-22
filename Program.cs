@@ -16,6 +16,8 @@ namespace Warehouse
             var Jimmys = new Warehouse("Jimmy's place", 10000, items);
 
             Jimmys.showStock();
+            
+            Jimmys.addItem(new Item("Gold Ring", 300), 20);
         }
     }
 }
