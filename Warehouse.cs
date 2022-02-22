@@ -23,7 +23,7 @@ namespace Warehouse
             Console.WriteLine($"Current stock for {Name} warehouse:");
             foreach (var item in CurrentItems)
             {
-                Console.WriteLine($"{item.Value} {item.Key.Name}s.");
+                Console.WriteLine($"    {item.Value} {item.Key.Name}s.");
             };
         }
 
