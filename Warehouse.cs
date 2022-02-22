@@ -5,11 +5,11 @@ namespace Warehouse
     public class Warehouse
     {
 
-        public string Name { get; set; }
+        string Name { get; set; }
 
         int Budget { get; set; }
 
-        public Dictionary<Item, int> CurrentItems { get; set; }
+        Dictionary<Item, int> CurrentItems { get; set; }
 
         public Warehouse(string name, int budget, Dictionary<Item, int> currentItems)
         {
