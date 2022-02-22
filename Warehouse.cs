@@ -7,7 +7,7 @@ namespace Warehouse
 
         string Name { get; set; }
 
-        int Budget { get; set; }
+        decimal Budget { get; set; }
 
         Dictionary<Item, int> CurrentItems { get; set; }
 
@@ -30,8 +30,8 @@ namespace Warehouse
         public void addItem(Item item, int amount){
             var total = amount * item.Price;
             if (Budget > total)
-            {
-                CurrentItems[item] += amount;
+            {   // Below line not working
+                CurrentItems.ContainsKey(item) ? CurrentItems[item] += amount : CurrentItems[item] = amount;
                 Budget -= total;
                 Console.WriteLine($"You purchased {amount} {item}s. It cost you {total}.");
                 Console.WriteLine($"Your remaining budget is {Budget}");

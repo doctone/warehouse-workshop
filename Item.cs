@@ -3,9 +3,9 @@ namespace Warehouse
     public class Item
     {
         public string Name { get; set; }
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
-        public Item(string name, double price)
+        public Item(string name, decimal price)
         {
             Name = name;
             Price = price;
