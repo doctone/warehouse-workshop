@@ -31,9 +31,15 @@ namespace Warehouse
             var total = amount * item.Price;
             if (Budget > total)
             {   // Below line not working
-                CurrentItems.ContainsKey(item) ? CurrentItems[item] += amount : CurrentItems[item] = amount;
+                if (CurrentItems.ContainsKey(item))
+                {
+                    CurrentItems[item] += amount;
+                } else 
+                {
+                    CurrentItems[item] = amount;
+                }
                 Budget -= total;
-                Console.WriteLine($"You purchased {amount} {item}s. It cost you {total}.");
+                Console.WriteLine($"You purchased {amount} {item.Name}s. It cost you {total}.");
                 Console.WriteLine($"Your remaining budget is {Budget}");
             }
         }
