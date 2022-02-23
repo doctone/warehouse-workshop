@@ -14,11 +14,5 @@ namespace Warehouse
             Items.Add(item);
             return Items;
         }
-
-        public void Checkout()
-        {
-            
-            Items = new List<Item>();
-        }
     }
 }
