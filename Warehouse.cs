@@ -30,7 +30,7 @@ namespace Warehouse
         public void addItem(Item item, int amount){
             var total = amount * item.Price;
             if (Budget > total)
-            {   // Below line not working
+            {
                 if (CurrentItems.ContainsKey(item))
                 {
                     CurrentItems[item] += amount;
